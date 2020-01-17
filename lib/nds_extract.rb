@@ -24,6 +24,7 @@ result = {}
   total_array = []
   while nds.length > count1
     count2 = 0
+<<<<<<< HEAD
     # names << nds[count1][:name]
     result[ nds[count1][:name] ] = 0
     total = 0
@@ -39,6 +40,19 @@ result = {}
     
   end
       # binding.pry
+=======
+    names << nds[count1][:name]
+    total = 0
+    while nds[count1][:movies].length > count2
+      total += nds[count1][:movies][count2][:worldwide_gross]
+      count2 += 1
+    end
+    count1 += 0
+    total_array << total
+    result[names[count1]] = total[count1]
+  end
+  
+>>>>>>> bf2574ad21cdb2973659c6ff2a0e47c4dcf864f1
   return result
   nil
 end
